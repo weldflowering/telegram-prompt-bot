@@ -12,6 +12,11 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
 
+    env:   # 👈 ADD THIS BLOCK HERE
+      BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+      CHAT_ID: ${{ secrets.CHAT_ID }}
+      SHEET_ID: ${{ secrets.SHEET_ID }}
+
     steps:
       - uses: actions/checkout@v4
 
