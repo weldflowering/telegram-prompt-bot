@@ -1,8 +1,9 @@
 import requests
+import os
 
-TOKEN = "8714851298:AAGKCUSpmK0AZta8Na1GzOCVOl3BKRXNmms"
-CHAT_ID = "-1003082238044"
-SHEET_ID = "1fqFRd-11r4tpoVQA2bDa5WYK8a8ZnaIdQE90_jv4jg0"
+TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
+SHEET_ID = os.environ["SHEET_ID"]
 
 INDEX_FILE = "index.txt"
 
