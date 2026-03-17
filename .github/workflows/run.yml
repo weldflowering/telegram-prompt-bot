@@ -1,0 +1,31 @@
+name: Daily Telegram Bot
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # 9:00 AM IST
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Pull latest changes
+        run: git pull
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - run: pip install requests
+      - run: python bot.py
+
+      - name: Save updated index
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@example.com"
+          git add index.txt
+          git commit -m "update index" || echo "no changes"
+          git push
