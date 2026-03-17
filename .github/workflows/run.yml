@@ -1,9 +1,8 @@
 name: Daily Telegram Bot
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '30 9 * * *'  # 3:00 PM IST
+    - cron: '30 3 * * *'  # 9:00 AM IST
 
 permissions:
   contents: write
