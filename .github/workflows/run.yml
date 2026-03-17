@@ -1,8 +1,7 @@
 name: Daily Telegram Bot
 
 on:
-  schedule:
-    - cron: '40 7 * * *'  # 12:30 PM IST
+  workflow_dispatch: 
 
 jobs:
   run-bot:
