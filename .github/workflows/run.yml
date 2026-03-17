@@ -2,7 +2,7 @@ name: Daily Telegram Bot
 
 on:
   schedule:
-    - cron: '20 7 * * *'  # 12:30 PM IST
+    - cron: '40 7 * * *'  # 12:30 PM IST
 
 jobs:
   run-bot:
