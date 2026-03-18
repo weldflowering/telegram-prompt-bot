@@ -2,7 +2,7 @@ name: Daily Telegram Bot
 
 on:
   schedule:
-    - cron: '30 3 * * *'  # 9:00 AM IST
+    - cron: '49 2 * * *'  # 8:19 AM IST
 
 permissions:
   contents: write
